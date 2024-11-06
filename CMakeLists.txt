@@ -4,10 +4,10 @@ set(TARGET plannerC)
 
 project(${TARGET}
     DESCRIPTION "Auto planner with C backend"
-    LANGUAGES C
+    LANGUAGES CXX
     )
 
-add_executable(${TARGET} ${CMAKE_SOURCE_DIR}/src/main.c)
+add_executable(${TARGET} ${CMAKE_SOURCE_DIR}/src/main.cpp)
 
 # Find all directories in src and include them
 file(GLOB_RECURSE HEADER_DIRS ${CMAKE_SOURCE_DIR}/src/*)

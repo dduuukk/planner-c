@@ -1,21 +1,29 @@
 #ifndef TASK_H
 #define TASK_H
 
-#include <string>
-#include <iostream>
-#include <vector>
+// Put under namespace to avoid naming conflicts
+namespace planner
+{
 
-typedef struct {
-    char* name;
-    char* description;
-} Task;
+    class Task
+    {
+    public:
+        Task();  // Constructor
+        ~Task(); // Destructor
 
-// Task* createTask(const char* name, const char* description);
-// const char* getTaskName(const Task* task);
-// const char* getTaskDescription(const Task* task);
-// void setTaskName(Task* task, const char* name);
-// void setTaskDescription(Task* task, const char* description);
-// void printTask(const Task* task);
-// void freeTask(Task* task);
+        // Member functions
+
+    private:
+        // Private member variables
+        int priority;
+        // TODO: Figure out due date type
+        
+
+
+
+        // Private member functions
+    };
+
+} // namespace planner
 
 #endif // TASK_H
