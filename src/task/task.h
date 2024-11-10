@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <string>
+#include <chrono>
+#include <sstream>
 
 // Put under namespace to avoid naming conflicts
 namespace planner
@@ -20,12 +22,17 @@ namespace planner
     private:
         // Private member variables
         int priority;
+        int weightedPriority;
         std::string name;
         std::string description;
         // TODO: Figure out due date type, string probably not right here
         std::string dueDate;
+        int dueDateArray[3];
+        // std::chrono::time_point<std::chrono::system_clock> dueDate;
 
         // Private member functions
+        int parseDueDate(const std::string& dateString);
+        bool verifyString(const std::string& s);
     };
 
 } // namespace planner

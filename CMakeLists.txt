@@ -18,5 +18,8 @@ add_executable(${TARGET} ${SOURCES})
 
 target_include_directories(${TARGET} PRIVATE ${HEADER_DIRS})
 
-target_compile_options(${TARGET} PRIVATE -Wall -Wextra -Wpedantic)
+target_compile_options(${TARGET} PRIVATE -Wall -Wextra -Wpedantic
+    $<$<CONFIG:Debug>:-g -O0>
+    $<$<CONFIG:Release>:-O3>
+)
 
